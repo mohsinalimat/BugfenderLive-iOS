@@ -22,6 +22,7 @@ Pod::Spec.new do |s|
   s.dependency 'SBJson', '~> 4.0.2'
   s.dependency 'CocoaLumberjack', '~> 2.2.0'
   s.dependency 'Reachability', '~> 3.2'
+  s.dependency 'BugfenderSDK', '~> 0.3'
 
   s.requires_arc = true
 end
