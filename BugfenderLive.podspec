@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "BugfenderLive"
-  s.version      = "0.0.#{Time.now.to_i}"
+  s.version      = "0.1.0"
   s.summary      = "Screen sharing capabilites for Bugfender"
   s.description  = <<-DESC
                   Bugfender Live lets customer support representatives see the screen of their users in real time. 
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/bugfender/BugfenderLive-iOS.git", :tag => "v#{s.version}" }
 
   s.ios.vendored_frameworks = ['Build/Debug/BugfenderLive.framework', 'BugfenderLive/libjingle_peerconnection/libjingle_peerconnection/WebRTC.framework' ]
-  s.frameworks = [ 'VideoToolbox', 'GLKit' ]
+  s.frameworks = [ 'AudioToolbox', 'CoreAudio', 'VideoToolbox', 'GLKit', 'AVFoundation', 'CoreMedia' ]
   s.library = 'c++'
   s.dependency 'SocketRocket', '~> 0.4.1'
   s.dependency 'SBJson', '~> 4.0.2'
