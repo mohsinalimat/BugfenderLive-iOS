@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "BugfenderLive"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "Screen sharing to debug your mobile app"
   s.description  = <<-DESC
                   Bugfender Live lets customer support representatives see the screen of their users in real time. 
@@ -20,7 +20,6 @@ Pod::Spec.new do |s|
   s.library = 'c++'
   s.dependency 'SocketRocket', '~> 0.4.1'
   s.dependency 'SBJson', '~> 4.0.2'
-  s.dependency 'CocoaLumberjack', '~> 2.2.0'
   s.dependency 'Reachability', '~> 3.2'
   s.dependency 'BugfenderSDK', '~> 0.3'
 

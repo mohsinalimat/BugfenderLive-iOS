@@ -11,21 +11,20 @@ BugfenderLive works on iOS 8.0 and better.
 
 This library works together with BugfenderSDK. [Please install BugfenderSDK first](https://github.com/bugfender/BugfenderSDK-iOS).
 
-1. Edit your Podfile:
+Step 1. Add an entry to your Podfile:
 
 ```ruby
-pod 'BugfenderSDK', '~> 0.3'
 pod 'BugfenderLive', '~> 0.1' 
 ```
 
-2. Import BugfenderLive in your AppDelegate:
+Step 2. Import BugfenderLive in your AppDelegate:
 
 ```objective-c
 #import <BugfenderSDK/BugfenderSDK.h>
 #import <BugfenderLive/BugfenderLive.h>
 ```
 
-3. Install BugfenderLive right **after enabling Bugfender**:
+Step 3. Install BugfenderLive right **after enabling Bugfender**:
 
 ```objective-c
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -38,13 +37,12 @@ pod 'BugfenderLive', '~> 0.1'
 }
 ```
 
-4. Disable Bitcode compilation: Select *Your Project* > *Your Target* > Build settings > Enable Bitcode: No
+Step 4. Disable Bitcode compilation: Select *Your Project* > *Your Target* > Build settings > Enable Bitcode: No
 
 Run the application and look for your Device page in the [Bugfender website](https://app.bugfender.com/). You will see a new button on the top right indicating whether the device is online or offline. Press that button to see the screen of your device.
 
 ## Known limitations
 
- * The SDK needs access to the microphone. It is not used for anything but will request access anyway. It is our top priority to fix that.
  * The supplied libraries do not have Bitcode compilation. You will need to disable Bitcode compilation in your project.
  * For now only CocoaPods is supported because the manual installation is quite complex and error-prone. You may want to try it though!
 
